@@ -26,8 +26,8 @@
       <file leaf-file-name="TrackingSeedTableSeeder.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/seeds/TrackingSeedTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="18972" column="41" selection-start-line="18972" selection-start-column="41" selection-end-line="18972" selection-end-column="41" />
+            <state relative-caret-position="-1209">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -217,7 +217,7 @@
       <option name="presentableId" value="Default" />
       <updated>1474042701989</updated>
       <workItem from="1474042703330" duration="651000" />
-      <workItem from="1474273639839" duration="3368000" />
+      <workItem from="1474273639839" duration="3600000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1474274653077</created>
@@ -240,11 +240,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474275469645</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test">
+      <created>1474277083554</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1474277083554</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4019000" />
+    <option name="totallyTimeSpent" value="4251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -391,8 +398,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/TrackingSeedTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="18972" column="41" selection-start-line="18972" selection-start-column="41" selection-end-line="18972" selection-end-column="41" />
+        <state relative-caret-position="-1209">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
