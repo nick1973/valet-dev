@@ -17,7 +17,7 @@ class TrackingSeedTableSeeder extends Seeder
         \DB::table('tracking')->delete();
         
         \DB::table('tracking')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'ticket_number' => '000',
