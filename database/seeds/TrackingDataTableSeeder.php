@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TrackingSeedTableSeeder extends Seeder
+class TrackingDataTableSeeder extends Seeder
 {
 
     /**
