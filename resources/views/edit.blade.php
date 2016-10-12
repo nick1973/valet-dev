@@ -15,15 +15,15 @@
                             {{ csrf_field() }}
 
                             <div class="row" style="padding-right: 10px">
-                                {{--@if(Auth::user()->name==='manager' || Auth::user()->name==='admin')--}}
+                                @if(Auth::user()->name==='manager' || Auth::user()->name==='admin')
                                     <a href="/reallocate/{{ $ticket->id }}" class="btn btn-warning">Reallocate Ticket No</a>
-
+                                @endif
                                     @if($ticket->ticket_key_safe=="")
                                         <input id="keysafe" type="button" class="btn btn-danger pull-right" value="Key Not Safe">
                                     @else
                                         <input id="keysafe" type="button" class="btn btn-success pull-right" value="Key is Safe">
                                     @endif
-                                {{--@endif--}}
+
                             </div>
 
                             <div class="form-group" id="submit-show" style="display: none">

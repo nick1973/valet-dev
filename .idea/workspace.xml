@@ -65,12 +65,12 @@
       <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+            <state relative-caret-position="403">
+              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
               <folding>
-                <marker date="1476263245245" expanded="true" signature="347:532" ph="..." />
-                <marker date="1476263245245" expanded="true" signature="360:530" ph="..." />
-                <marker date="1476263245245" expanded="true" signature="369:529" ph="..." />
+                <marker date="1476263449099" expanded="true" signature="347:532" ph="..." />
+                <marker date="1476263449099" expanded="true" signature="360:530" ph="..." />
+                <marker date="1476263449099" expanded="true" signature="369:529" ph="..." />
               </folding>
             </state>
           </provider>
@@ -292,7 +292,7 @@
       <workItem from="1474273639839" duration="9284000" />
       <workItem from="1474385815104" duration="615000" />
       <workItem from="1474633548753" duration="17000" />
-      <workItem from="1476262842779" duration="477000" />
+      <workItem from="1476262842779" duration="614000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1474274653077</created>
@@ -357,11 +357,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474277876851</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="enable key safe">
+      <created>1476263349284</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1476263349284</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11044000" />
+    <option name="totallyTimeSpent" value="11181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -419,7 +426,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="enable key safe" />
+    <option name="LAST_COMMIT_MESSAGE" value="enable key safe" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -685,12 +693,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        <state relative-caret-position="403">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
           <folding>
-            <marker date="1476263245245" expanded="true" signature="347:532" ph="..." />
-            <marker date="1476263245245" expanded="true" signature="360:530" ph="..." />
-            <marker date="1476263245245" expanded="true" signature="369:529" ph="..." />
+            <marker date="1476263449099" expanded="true" signature="347:532" ph="..." />
+            <marker date="1476263449099" expanded="true" signature="360:530" ph="..." />
+            <marker date="1476263449099" expanded="true" signature="369:529" ph="..." />
           </folding>
         </state>
       </provider>
