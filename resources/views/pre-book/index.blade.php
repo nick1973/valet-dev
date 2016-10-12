@@ -36,7 +36,7 @@
                                 @endif
                                 <th>Action</th>
                             </tr>
-                            @if(Auth::user()->name=='visitorcentre')
+                            {{--@if(Auth::user()->name=='visitorcentre')--}}
                                 @foreach($pre_books as $pre_booked)
                                     <tr>
                                         <td style="text-transform:uppercase">{{ $pre_booked->ticket_registration }}</td>
@@ -73,34 +73,34 @@
                                         @endif
                                     </tr>
                                 @endforeach
-                                @else
-                                    @foreach($today_pre_books as $pre_booked)
-                                        <tr>
-                                            <td style="text-transform:uppercase">{{ $pre_booked->ticket_registration }}</td>
-                                            <td>
-                                                @if($pre_booked->existing_customer=="Yes")
-                                                    <i class="fa fa-user" style="color: pink" aria-hidden="true"></i>
-                                                @endif
-                                                @if($pre_booked->ticket_price=='VIP-FREE')
-                                                    <i class="fa fa-star" style="color: gold" aria-hidden="true"></i>
-                                                @endif
-                                                {{ $pre_booked->ticket_name }}
-                                            </td>
-                                            @if($pre_booked->ticket_mobile && $pre_booked->ticket_price && $pre_booked->ticket_name
-                                            && $pre_booked->booked_in_by && $pre_booked->ticket_driver)
-                                                <td><a href="issue/{{ $pre_booked->id }}" class="btn btn-success btn-sm">Issue</a></td>
-                                            @endif
-                                            @if(Auth::user()->name=='visitorcentre')
-                                                <td>{{ $pre_booked->booking_date }}</td>
-                                            @endif
-                                            <td><a href="home/{{ $pre_booked->id }}/edit" class="btn btn-default">Edit</a></td>
+                                {{--@else--}}
+                                    {{--@foreach($today_pre_books as $pre_booked)--}}
+                                        {{--<tr>--}}
+                                            {{--<td style="text-transform:uppercase">{{ $pre_booked->ticket_registration }}</td>--}}
+                                            {{--<td>--}}
+                                                {{--@if($pre_booked->existing_customer=="Yes")--}}
+                                                    {{--<i class="fa fa-user" style="color: pink" aria-hidden="true"></i>--}}
+                                                {{--@endif--}}
+                                                {{--@if($pre_booked->ticket_price=='VIP-FREE')--}}
+                                                    {{--<i class="fa fa-star" style="color: gold" aria-hidden="true"></i>--}}
+                                                {{--@endif--}}
+                                                {{--{{ $pre_booked->ticket_name }}--}}
+                                            {{--</td>--}}
+                                            {{--@if($pre_booked->ticket_mobile && $pre_booked->ticket_price && $pre_booked->ticket_name--}}
+                                            {{--&& $pre_booked->booked_in_by && $pre_booked->ticket_driver)--}}
+                                                {{--<td><a href="issue/{{ $pre_booked->id }}" class="btn btn-success btn-sm">Issue</a></td>--}}
+                                            {{--@endif--}}
+                                            {{--@if(Auth::user()->name=='visitorcentre')--}}
+                                                {{--<td>{{ $pre_booked->booking_date }}</td>--}}
+                                            {{--@endif--}}
+                                            {{--<td><a href="home/{{ $pre_booked->id }}/edit" class="btn btn-default">Edit</a></td>--}}
                                             {{--only if visitor centre--}}
-                                            @if(Auth::user()->name=='visitorcentre')
-                                                <td><a href="home/{{ $pre_booked->id }}/edit" class="btn btn-primary">Remove</a></td>
-                                            @endif
-                                        </tr>
-                                    @endforeach
-                            @endif
+                                            {{--@if(Auth::user()->name=='visitorcentre')--}}
+                                                {{--<td><a href="home/{{ $pre_booked->id }}/edit" class="btn btn-primary">Remove</a></td>--}}
+                                            {{--@endif--}}
+                                        {{--</tr>--}}
+                                    {{--@endforeach--}}
+                            {{--@endif--}}
                         </table>
 
                     </div>
