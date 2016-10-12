@@ -49,7 +49,7 @@ class PreBookController extends Controller
         }
         $input = $request->all();
         Tracking::create($input);
-        return redirect('home')->with('status', 'Ticket\'s Been Booked!');
+        return redirect('pre-booking')->with('status', 'Ticket\'s Been Booked!');
     }
 
     public function issueTicket($id)

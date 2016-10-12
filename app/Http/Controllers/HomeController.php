@@ -220,9 +220,9 @@ class HomeController extends Controller
         $ticket = Tracking::find($id);
         $input = $request->all();
         $ticket->update($input);
-        if($ticket->$ticket_id===''){
-            return redirect()->route('pre-booking.index');
-        }
+//        if($ticket->$ticket_id===''){
+//            return redirect()->route('pre-booking.index');
+//        }
         return redirect()->route('home.index');
     }
 
