@@ -23,6 +23,9 @@ class UserController extends Controller
 
     public function update(Request $request, $id)
     {
+        $input = $request->all();
+        $user = User::find($id);
+        $user->update(['ticket_number' => '', 'ticket_serial_number' => '']);
         $rules = [
             'ticket_number' => 'required|max:3|min:3'
             //'ticket_serial_number' => 'required|numeric'
@@ -45,8 +48,7 @@ class UserController extends Controller
         {
             return redirect()->back()->with('status','This Ticket is in use!');
         }
-        $input = $request->all();
-        $user = User::find($id);
+
         $user->update($input);
         return $this->index();
     }
