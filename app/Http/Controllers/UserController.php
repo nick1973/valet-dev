@@ -25,7 +25,22 @@ class UserController extends Controller
     {
         $input = $request->all();
         $user = User::find($id);
+        if(Auth::user()->name==='Valet1'){
+            $ticket_id = 'valet1_ticket_id';
+            //$ticket_serial_number = 'valet1_ticket_serial_number';
+        }
+        if(Auth::user()->name==='Valet2'){
+            $ticket_id = 'valet2_ticket_id';
+            //$ticket_serial_number = 'valet2_ticket_serial_number';
+        }
+        if(Auth::user()->name==='Valet3'){
+            $ticket_id = 'valet3_ticket_id';
+            //$ticket_serial_number = 'valet3_ticket_serial_number';
+        }
         $user->update(['ticket_number' => '', 'ticket_serial_number' => '']);
+        $lastRecord = Tracking::latest($ticket_id)->where('ticket_status', 'active')->first();
+        $lastRecord->update([$ticket_id => '']);
+
         $rules = [
             'ticket_number' => 'required|max:3|min:3'
             //'ticket_serial_number' => 'required|numeric'
