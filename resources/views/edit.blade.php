@@ -107,22 +107,22 @@
                                        value="Visitors Centre">
                             </div>
                         @endif
-                        <div class="form-group">
-                            <label style="color: white">Driver</label>
-                            <select name="ticket_driver" class="form-control" id="ticket_price">
+                        {{--<div class="form-group">--}}
+                            {{--<label style="color: white">Driver</label>--}}
+                            {{--<select name="ticket_driver" class="form-control" id="ticket_price">--}}
                                 {{--@if($ticket->ticket_driver==null)--}}
-                                    <option>{{ $ticket->ticket_driver }}</option>
+                                    {{--<option>{{ $ticket->ticket_driver }}</option>--}}
 
-                                    <option>Arnoldo Mota</option>
-                                    <option>Brian Duggan</option>
-                                    <option>Dave Duggan</option>
-                                    <option>Ivo Correia</option>
-                                    <option>John Harris</option>
-                                    <option>Nelson Fonseca</option>
-                                    <option>Robert Jones</option>
+                                    {{--<option>Arnoldo Mota</option>--}}
+                                    {{--<option>Brian Duggan</option>--}}
+                                    {{--<option>Dave Duggan</option>--}}
+                                    {{--<option>Ivo Correia</option>--}}
+                                    {{--<option>John Harris</option>--}}
+                                    {{--<option>Nelson Fonseca</option>--}}
+                                    {{--<option>Robert Jones</option>--}}
                                 {{--@endif--}}
-                            </select>
-                        </div>
+                            {{--</select>--}}
+                        {{--</div>--}}
 
                             <div class="form-group">
                                 <label style="color: white"></label>

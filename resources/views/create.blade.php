@@ -104,31 +104,31 @@
                                 </select>
                             </div>
 
-                            <div class="form-group">
-                                <select name="ticket_driver" class="form-control" id="ticket_price">
-                                    @if(!empty(old('ticket_driver')))
-                                        <option selected>{{ old('ticket_driver') }}</option>
-                                        <option>Arnoldo Mota</option>
-                                        <option>Brian Duggan</option>
-                                        <option>Dave Duggan</option>
-                                        <option>Ivo Correir</option>
-                                        <option>John Harris</option>
-                                        <option>Nelson Fonseca</option>
-                                        <option>Robert Jones</option>
-                                    @elseif(!empty($old_data->ticket_driver))
-                                        <option>{{ $old_data->ticket_driver }}</option>
-                                    @else
-                                        <option disabled selected>Driver</option>
-                                        <option>Arnoldo Mota</option>
-                                        <option>Brian Duggan</option>
-                                        <option>Dave Duggan</option>
-                                        <option>Ivo Correir</option>
-                                        <option>John Harris</option>
-                                        <option>Nelson Fonseca</option>
-                                        <option>Robert Jones</option>
-                                    @endif
-                                </select>
-                            </div>
+                            {{--<div class="form-group">--}}
+                                {{--<select name="ticket_driver" class="form-control" id="ticket_price">--}}
+                                    {{--@if(!empty(old('ticket_driver')))--}}
+                                        {{--<option selected>{{ old('ticket_driver') }}</option>--}}
+                                        {{--<option>Arnoldo Mota</option>--}}
+                                        {{--<option>Brian Duggan</option>--}}
+                                        {{--<option>Dave Duggan</option>--}}
+                                        {{--<option>Ivo Correir</option>--}}
+                                        {{--<option>John Harris</option>--}}
+                                        {{--<option>Nelson Fonseca</option>--}}
+                                        {{--<option>Robert Jones</option>--}}
+                                    {{--@elseif(!empty($old_data->ticket_driver))--}}
+                                        {{--<option>{{ $old_data->ticket_driver }}</option>--}}
+                                    {{--@else--}}
+                                        {{--<option disabled selected>Driver</option>--}}
+                                        {{--<option>Arnoldo Mota</option>--}}
+                                        {{--<option>Brian Duggan</option>--}}
+                                        {{--<option>Dave Duggan</option>--}}
+                                        {{--<option>Ivo Correir</option>--}}
+                                        {{--<option>John Harris</option>--}}
+                                        {{--<option>Nelson Fonseca</option>--}}
+                                        {{--<option>Robert Jones</option>--}}
+                                    {{--@endif--}}
+                                {{--</select>--}}
+                            {{--</div>--}}
                             <div class="form-group">
                                 @if(!empty($old_data->existing_customer)=="Yes" || !empty(old('existing_customer')))
                                     <input id="existing_customer" type="button" class="btn btn-success"
