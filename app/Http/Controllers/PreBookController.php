@@ -13,7 +13,7 @@ class PreBookController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $pre_books = Tracking::where('ticket_status', 'pre booked')->get();
+        $pre_books = Tracking::where('ticket_status', 'pre booked')->orderBy('booking_date', 'asc')->get();
         $today_pre_books = Tracking::where('ticket_status', 'pre booked')->whereRaw('date(booking_date) = ?', [Carbon::today()])->get();
         return view('pre-book.index', compact('user', 'pre_books', 'today_pre_books'));
     }

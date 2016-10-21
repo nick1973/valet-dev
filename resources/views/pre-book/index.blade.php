@@ -28,18 +28,18 @@
 
                         <table class="table" style="color: white">
                             <tr>
-                                <th>Reg</th>
+                                <th>Car</th>
                                 <th>Name</th>
-                                @if(Auth::user()->name=='visitorcentre')
+                                {{--@if(Auth::user()->name=='visitorcentre')--}}
                                     <th>Date to Arrive</th>
                                     <th>Action</th>
-                                @endif
-                                <th>Action</th>
+                                {{--@endif--}}
+
                             </tr>
                             {{--@if(Auth::user()->name=='visitorcentre')--}}
                                 @foreach($pre_books as $pre_booked)
                                     <tr>
-                                        <td style="text-transform:uppercase">{{ $pre_booked->ticket_registration }}</td>
+                                        <td>{{ $pre_booked->ticket_manufacturer }}, {{ $pre_booked->ticket_model }}, {{ $pre_booked->ticket_colour }}</td>
                                         <td>
                                             @if($pre_booked->existing_customer=="Yes")
                                                 <i class="fa fa-user" style="color: pink" aria-hidden="true"></i>
@@ -53,12 +53,12 @@
                                         && $pre_booked->booked_in_by && $pre_booked->ticket_driver)
                                             <td><a href="issue/{{ $pre_booked->id }}" class="btn btn-success btn-sm">Issue</a></td>
                                         @endif
-                                        @if(Auth::user()->name=='visitorcentre')
+                                        {{--@if(Auth::user()->name=='visitorcentre')--}}
                                             <?php
                                             $date = date_create($pre_booked->booking_date);
                                             ?>
-                                            <td>{{ date_format($date,"d/m/Y") }}</td>
-                                        @endif
+                                            <td>{{ date_format($date,"d/m/Y g:i:sa") }}</td>
+                                        {{--@endif--}}
                                         <td><a href="home/{{ $pre_booked->id }}/edit" class="btn btn-default">Edit</a></td>
                                         {{--only if visitor centre--}}
                                         @if(Auth::user()->name=='visitorcentre')
