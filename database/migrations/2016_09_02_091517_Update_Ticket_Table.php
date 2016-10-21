@@ -13,7 +13,7 @@ class UpdateTicketTable extends Migration
     public function up()
     {
         Schema::table('tracking', function ($table) {
-            $table->date('booking_date');
+            $table->dateTime('booking_date');
 
         });
     }
