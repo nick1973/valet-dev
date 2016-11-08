@@ -180,14 +180,14 @@ class HomeController extends Controller
         {
             array_pull($input, 'ticket_serial_number');
             $result = array_add($input, $ticket_serial_number, $serial_number);
-            array_pull($result, 'ticket_number');
+            //array_pull($result, 'ticket_number');
             $input = array_add($result, $ticket_id, $ticket_number);
             //return $input;
             Tracking::create($input);
             return redirect('home')->with('status', 'Ticket\'s Been Issued!')->withInput();
         }
             if (Tracking::where($ticket_id, $ticket_number)->orderBy('id', 'desc')->first()->exists()) {
-                // NO Ticket found
+                // Ticket found
                 $ticket = Tracking::where($ticket_id, $ticket_number)->orderBy('id', 'desc')->first();
 
                 if($ticket->ticket_status==='complete' || $ticket->ticket_status==='deleted')
