@@ -69,39 +69,41 @@
                             </div>
 
                             <div class="form-group">
-                                <select name="booked_in_by" class="form-control" id="ticket_price">
-                                    @if(!empty(old('booked_in_by')))
-                                        <option selected>{{ old('booked_in_by') }}</option>
-                                        <option>Amy Hamilton</option>
-                                        <option>Arnoldo Mota</option>
-                                        <option>Brian Duggan</option>
-                                        <option>Dave Duggan</option>
-                                        <option>Ellie Porterfield</option>
-                                        <option>Fabio Barata</option>
-                                        <option>Ivo Correia</option>
-                                        <option>John Harris</option>
-                                        <option>Joshua Little</option>
-                                        <option>Nelson Fonseca</option>
-                                        <option>Robert Jones</option>
-                                        <option>Rui Jesus</option>
-                                    @elseif(!empty($old_data->booked_in_by))
-                                        <option>{{ $old_data->booked_in_by }}</option>
-                                    @else
-                                        <option disabled selected>Booked in By</option>
-                                        <option>Amy Hamilton</option>
-                                        <option>Arnoldo Mota</option>
-                                        <option>Brian Duggan</option>
-                                        <option>Dave Duggan</option>
-                                        <option>Ellie Porterfield</option>
-                                        <option>Fabio Barata</option>
-                                        <option>Ivo Correia</option>
-                                        <option>John Harris</option>
-                                        <option>Joshua Little</option>
-                                        <option>Nelson Fonseca</option>
-                                        <option>Robert Jones</option>
-                                        <option>Rui Jesus</option>
-                                    @endif
-                                </select>
+                                <input type="text" class="form-control" id="" placeholder="Booked in By"
+                                       value="{{ empty($booked_in_by) ? 'No Name' : $booked_in_by }}">
+                                {{--<select name="booked_in_by" class="form-control" id="ticket_price">--}}
+                                    {{--@if(!empty(old('booked_in_by')))--}}
+                                        {{--<option selected>{{ old('booked_in_by') }}</option>--}}
+                                        {{--<option>Amy Hamilton</option>--}}
+                                        {{--<option>Arnoldo Mota</option>--}}
+                                        {{--<option>Brian Duggan</option>--}}
+                                        {{--<option>Dave Duggan</option>--}}
+                                        {{--<option>Ellie Porterfield</option>--}}
+                                        {{--<option>Fabio Barata</option>--}}
+                                        {{--<option>Ivo Correia</option>--}}
+                                        {{--<option>John Harris</option>--}}
+                                        {{--<option>Joshua Little</option>--}}
+                                        {{--<option>Nelson Fonseca</option>--}}
+                                        {{--<option>Robert Jones</option>--}}
+                                        {{--<option>Rui Jesus</option>--}}
+                                    {{--@elseif(!empty($old_data->booked_in_by))--}}
+                                        {{--<option>{{ $old_data->booked_in_by }}</option>--}}
+                                    {{--@else--}}
+                                        {{--<option disabled selected>Booked in By</option>--}}
+                                        {{--<option>Amy Hamilton</option>--}}
+                                        {{--<option>Arnoldo Mota</option>--}}
+                                        {{--<option>Brian Duggan</option>--}}
+                                        {{--<option>Dave Duggan</option>--}}
+                                        {{--<option>Ellie Porterfield</option>--}}
+                                        {{--<option>Fabio Barata</option>--}}
+                                        {{--<option>Ivo Correia</option>--}}
+                                        {{--<option>John Harris</option>--}}
+                                        {{--<option>Joshua Little</option>--}}
+                                        {{--<option>Nelson Fonseca</option>--}}
+                                        {{--<option>Robert Jones</option>--}}
+                                        {{--<option>Rui Jesus</option>--}}
+                                    {{--@endif--}}
+                                {{--</select>--}}
                             </div>
 
                             {{--<div class="form-group">--}}

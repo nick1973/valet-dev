@@ -84,6 +84,7 @@ class HomeController extends Controller
 
     public function create()
     {
+        $booked_in_by = Auth::user()->booked_in_by;
         if(Auth::user()->name==='Valet1'){
             $ticket_id = 'valet1_ticket_id';
             $ticket_serial_number = 'valet1_ticket_serial_number';
@@ -101,7 +102,7 @@ class HomeController extends Controller
         if($lastRecord->$ticket_id === '' && $lastRecord->$ticket_serial_number === ''){
             $ticket_number = Auth::user()->ticket_number;
             $ticket_serial_number = Auth::user()->ticket_serial_number;
-            return view('create', compact('ticket_number', 'ticket_serial_number'));
+            return view('create', compact('ticket_number', 'ticket_serial_number', 'booked_in_by'));
         }
         $ticket_serial_number = (int)$lastRecord->$ticket_serial_number;
         $ticket_serial_number = $ticket_serial_number + 1;
@@ -112,7 +113,8 @@ class HomeController extends Controller
         {
             $ticket_number = '001';
         }
-        return view('create', compact('ticket_number', 'ticket_serial_number'));
+
+        return view('create', compact('ticket_number', 'ticket_serial_number', 'booked_in_by'));
     }
 
 //    public function create()
@@ -216,6 +218,7 @@ class HomeController extends Controller
             $ticket_id = 'valet3_ticket_id';
             $ticket_serial_number = 'valet3_ticket_serial_number';
         }
+
 
         $ticket = Tracking::find($id);
         $input = $request->all();

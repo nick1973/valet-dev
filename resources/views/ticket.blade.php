@@ -39,17 +39,22 @@
                             </div>
 
                             <div class="form-group">
-                                <label style="color: white" class="col-md-4 control-label">Driver</label>
+                                <label style="color: white" class="col-md-4 control-label">Booked in By</label>
                                 <div class="col-md-6">
-                                    <select name="ticket_driver" class="form-control" id="ticket_price">
-                                        <option selected>{{ old('ticket_driver') }}</option>
+                                    <select name="booked_in_by" class="form-control" id="ticket_price">
+                                        <option selected>{{ old('booked_in_by') }}</option>
+                                        <option>Amy Hamilton</option>
                                         <option>Arnoldo Mota</option>
                                         <option>Brian Duggan</option>
                                         <option>Dave Duggan</option>
-                                        <option>Ivo Correir</option>
+                                        <option>Ellie Porterfield</option>
+                                        <option>Fabio Barata</option>
+                                        <option>Ivo Correia</option>
                                         <option>John Harris</option>
+                                        <option>Joshua Little</option>
                                         <option>Nelson Fonseca</option>
                                         <option>Robert Jones</option>
+                                        <option>Rui Jesus</option>
                                     </select>
                                 </div>
                             </div>
