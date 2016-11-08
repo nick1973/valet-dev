@@ -69,7 +69,7 @@
                             </div>
 
                             <div class="form-group">
-                                <input type="text" class="form-control" id="" placeholder="Booked in By"
+                                <input name="booked_in_by" type="text" class="form-control" id="" placeholder="Booked in By"
                                        value="{{ empty($booked_in_by) ? 'No Name' : $booked_in_by }}" readonly>
                                 {{--<select name="booked_in_by" class="form-control" id="ticket_price">--}}
                                     {{--@if(!empty(old('booked_in_by')))--}}
