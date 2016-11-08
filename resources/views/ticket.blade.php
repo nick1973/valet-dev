@@ -39,6 +39,22 @@
                             </div>
 
                             <div class="form-group">
+                                <label style="color: white" class="col-md-4 control-label">Driver</label>
+                                <div class="col-md-6">
+                                    <select name="ticket_driver" class="form-control" id="ticket_price">
+                                        <option selected>{{ old('ticket_driver') }}</option>
+                                        <option>Arnoldo Mota</option>
+                                        <option>Brian Duggan</option>
+                                        <option>Dave Duggan</option>
+                                        <option>Ivo Correir</option>
+                                        <option>John Harris</option>
+                                        <option>Nelson Fonseca</option>
+                                        <option>Robert Jones</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
                                          Add Ticket Number
