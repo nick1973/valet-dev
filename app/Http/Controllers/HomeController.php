@@ -110,7 +110,7 @@ class HomeController extends Controller
         //find last ticket number in all 3 ticket id's
         //$ticket_number = (int)$lastRecord->$ticket_id;
         $ticket_number = Auth::user()->ticket_number;
-        $truelast_record = Tracking::latest('id')->where('ticket_status', 'active')->first();
+        $truelast_record = Tracking::latest('id')->where('ticket_status', 'active')->orWhere('ticket_status', 'complete')->first();
 
         if($truelast_record->valet1_ticket_id==$ticket_number || $truelast_record->valet2_ticket_id==$ticket_number || $truelast_record->valet3_ticket_id==$ticket_number){
             $ticket_number = sprintf('%03d', (int)$ticket_number + 1);
