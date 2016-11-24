@@ -38,8 +38,8 @@ class UserController extends Controller
             //$ticket_serial_number = 'valet3_ticket_serial_number';
         }
         $user->update(['ticket_number' => '', 'ticket_serial_number' => '']);
-        $lastRecord = Tracking::latest($ticket_id)->where('ticket_status', 'active')->first();
-        $lastRecord->update([$ticket_id => '']);
+        //$lastRecord = Tracking::latest($ticket_id)->where('ticket_status', 'active')->first();
+        //$lastRecord->update([$ticket_id => '']);
 
         $rules = [
             'ticket_number' => 'required|max:3|min:3'

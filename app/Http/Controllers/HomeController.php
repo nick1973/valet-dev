@@ -107,8 +107,15 @@ class HomeController extends Controller
         $ticket_serial_number = (int)$lastRecord->$ticket_serial_number;
         $ticket_serial_number = $ticket_serial_number + 1;
 
-        $ticket_number = (int)$lastRecord->$ticket_id;
-        $ticket_number = sprintf('%03d', (int)$ticket_number + 1);
+        //find last ticket number in all 3 ticket id's
+        //$ticket_number = (int)$lastRecord->$ticket_id;
+        $ticket_number = Auth::user()->ticket_number;
+        $truelast_record = Tracking::latest('id')->where('ticket_status', 'active')->first();
+
+        if($truelast_record->valet1_ticket_id==$ticket_number || $truelast_record->valet2_ticket_id==$ticket_number || $truelast_record->valet3_ticket_id==$ticket_number){
+            $ticket_number = sprintf('%03d', (int)$ticket_number + 1);
+        }
+
         if($ticket_number==='121')
         {
             $ticket_number = '001';
@@ -180,7 +187,7 @@ class HomeController extends Controller
         {
             array_pull($input, 'ticket_serial_number');
             $result = array_add($input, $ticket_serial_number, $serial_number);
-            //array_pull($result, 'ticket_number');
+            array_pull($result, 'ticket_number');
             $input = array_add($result, $ticket_id, $ticket_number);
             //return $input;
             Tracking::create($input);

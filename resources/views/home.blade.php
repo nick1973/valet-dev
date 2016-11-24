@@ -41,7 +41,7 @@
                                     {{--<td><i style="color: green" class="fa fa-key" aria-hidden="true"></i></td>--}}
                                 {{--@endif--}}
 
-                                    <td>{{ $ticket->ticket_number }}</td>
+                                    <td>{{ $ticket->ticket_number }}{{ $ticket->valet1_ticket_id }}{{ $ticket->valet2_ticket_id }}{{ $ticket->valet3_ticket_id }}</td>
 
                                 <td><div style="word-wrap: break-word; width: 100px">
                                 @if($ticket->ticket_key_safe=="")
