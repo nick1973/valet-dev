@@ -249,6 +249,7 @@
                                 var curr_date = d.getDate();
                                 var curr_month = d.getMonth() + 1; //Months are zero based
                                 var curr_year = d.getFullYear();
+                                console.log(curr_date+'/'+curr_month+'/'+curr_year)
 
                                 $.post("/reports/weekly-report",
                                         {
