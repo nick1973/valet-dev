@@ -132,7 +132,7 @@ class HomeController extends Controller
         $ticket_serial_number = $ticket_serial_number + 1;
         //find last ticket number in all 3 ticket id's
         $ticket_number = (int)$lastRecord->$ticket_id;
-        return $lastRecord;
+        //return $lastRecord;
         $ticket_number = sprintf('%03d', (int)$ticket_number + 1);
         //$ticket_number = Auth::user()->ticket_number;
         $truelast_record = Tracking::latest('id')->where('ticket_status', 'active')->orWhere('ticket_status', 'complete')->first();
