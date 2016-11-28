@@ -187,8 +187,12 @@
                                 });
 
                                 $('#getDates').on('click', function () {
-                                    var d = $('#date_timepicker_end').datetimepicker('getValue');
-                                    console.log(d.getDate());
+                                    var start = $('#date_timepicker_start').datetimepicker('getValue');
+                                    var end = $('#date_timepicker_end').datetimepicker('getValue');
+                                    var start_date = start.getDate()+'/'+ (start.getMonth()+1) +'/'+ start.getFullYear()
+                                    var end_date = end.getDate()+'/'+ (end.getMonth()+1) +'/'+ end.getFullYear()
+                                    console.log(start_date);
+                                    console.log(end_date);
                                 });
                             });
 
