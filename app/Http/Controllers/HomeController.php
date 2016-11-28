@@ -99,8 +99,9 @@ class HomeController extends Controller
             $ticket_serial_number = 'valet3_ticket_serial_number';
         }
         
+        $lastRecord = Tracking::latest('id')->where('ticket_status', 'active')->where($ticket_id, '!=', '')->first();
         $created_at = Tracking::where($ticket_id, $lastRecord->$ticket_id)->first();
-
+        return $created_at;
         $user_created_at = Auth::user()->updated_at;
 
         //$ticket_number = (int)$lastRecord->$ticket_id;
@@ -116,7 +117,7 @@ class HomeController extends Controller
             return view('create', compact('ticket_number', 'ticket_serial_number', 'booked_in_by'));
         }
         
-        $lastRecord = Tracking::latest('id')->where('ticket_status', 'active')->where($ticket_id, '!=', '')->first();
+        
         
         $ticket_serial_number = (int)$lastRecord->$ticket_serial_number;
         $ticket_serial_number = $ticket_serial_number + 1;
