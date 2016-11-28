@@ -48,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="101" column="49" selection-start-line="101" selection-start-column="49" selection-end-line="101" selection-end-column="49" />
+              <caret line="104" column="10" selection-start-line="104" selection-start-column="10" selection-end-line="104" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -453,7 +453,7 @@
       <workItem from="1479373505721" duration="617000" />
       <workItem from="1479979957601" duration="13976000" />
       <workItem from="1480064766774" duration="18580000" />
-      <workItem from="1480323542879" duration="2392000" />
+      <workItem from="1480323542879" duration="2502000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1474274653077</created>
@@ -777,11 +777,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480325873356</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="ticket fix">
+      <created>1480325959250</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1480325959250</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95239000" />
+    <option name="totallyTimeSpent" value="95349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1206,7 +1213,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="101" column="49" selection-start-line="101" selection-start-column="49" selection-end-line="101" selection-end-column="49" />
+          <caret line="104" column="10" selection-start-line="104" selection-start-column="10" selection-end-line="104" selection-end-column="10" />
           <folding />
         </state>
       </provider>
