@@ -133,11 +133,65 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="text-center" id="page-selection" style="color: white"></div>
-                        <div class="text-center" style="color: white">
-                            <h4>Please choose a week</h4>
+
+                        <div style="color: white" class="form-group col-md-4 col-lg-4">
+                            <h4>Please choose a start date</h4>
+                            <div class="date">Start
+                                <input  name="date_timepicker_start" class="form-control" id="date_timepicker_start" type="text" >
+                            </div>
                         </div>
+                        <div style="color: white" class="form-group col-md-4 col-lg-4">
+                            <h4>Please choose a end date</h4>
+                            <div class="date">
+                                Finish
+                                <input  name="date_timepicker_end" class="form-control" id="date_timepicker_end" type="text" >
+                            </div>
+                        </div>
+                        <div style="color: white" class="form-group col-md-4 col-lg-4">
+                            <h4>Pl</h4>
+                            <div class="date">
+                                Get
+                                <input id="getDates" type="button" class="btn btn-default" value="get">
+                            </div>
+                        </div>
+
+
+                        {{--<div class="text-center" id="page-selection" style="color: white"></div>--}}
+                        {{--<div class="text-center" style="color: white">--}}
+                            {{--<h4>Please choose a week</h4>--}}
+                        {{--</div>--}}
                         <script>
+
+                            jQuery(function(){
+                                jQuery('#date_timepicker_start').datetimepicker({
+                                    theme:'dark',
+                                    format:'d/m/Y',
+                                    onShow:function( ct ){
+                                        this.setOptions({
+                                            maxDate:jQuery('#date_timepicker_end').val()?jQuery('#date_timepicker_end').val():false
+                                            //console.log(maxDate)
+                                        })
+                                    },
+                                    timepicker:false
+                                });
+
+                                jQuery('#date_timepicker_end').datetimepicker({
+                                    theme:'dark',
+                                    format:'d/m/Y',
+                                    onShow:function( ct ){
+                                        this.setOptions({
+                                            minDate:jQuery('#date_timepicker_start').val()?jQuery('#date_timepicker_start').val():false
+                                        })
+                                    },
+                                    timepicker:false
+                                });
+
+                                $('#getDates').on('click', function () {
+                                    var d = $('#date_timepicker_end').datetimepicker('getValue');
+                                    console.log(d.getDate());
+                                });
+                            });
+
                             function actual() {
                                 var total = null;
                                 var subTotal = null;
