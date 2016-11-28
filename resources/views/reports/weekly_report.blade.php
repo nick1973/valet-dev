@@ -134,32 +134,32 @@
                             </div>
                         </div>
 
-                        <div style="color: white" class="form-group col-md-4 col-lg-4">
-                            <h4>Please choose a start date</h4>
-                            <div class="date">Start
-                                <input  name="date_timepicker_start" class="form-control" id="date_timepicker_start" type="text" >
-                            </div>
-                        </div>
-                        <div style="color: white" class="form-group col-md-4 col-lg-4">
-                            <h4>Please choose a end date</h4>
-                            <div class="date">
-                                Finish
-                                <input  name="date_timepicker_end" class="form-control" id="date_timepicker_end" type="text" >
-                            </div>
-                        </div>
-                        <div style="color: white" class="form-group col-md-4 col-lg-4">
-                            <h4>Pl</h4>
-                            <div class="date">
-                                Get
-                                <input id="getDates" type="button" class="btn btn-default" value="get">
-                            </div>
-                        </div>
-
-
-                        {{--<div class="text-center" id="page-selection" style="color: white"></div>--}}
-                        {{--<div class="text-center" style="color: white">--}}
-                            {{--<h4>Please choose a week</h4>--}}
+                        {{--<div style="color: white" class="form-group col-md-4 col-lg-4">--}}
+                            {{--<h4>Please choose a start date</h4>--}}
+                            {{--<div class="date">Start--}}
+                                {{--<input  name="date_timepicker_start" class="form-control" id="date_timepicker_start" type="text" >--}}
+                            {{--</div>--}}
                         {{--</div>--}}
+                        {{--<div style="color: white" class="form-group col-md-4 col-lg-4">--}}
+                            {{--<h4>Please choose a end date</h4>--}}
+                            {{--<div class="date">--}}
+                                {{--Finish--}}
+                                {{--<input  name="date_timepicker_end" class="form-control" id="date_timepicker_end" type="text" >--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div style="color: white" class="form-group col-md-4 col-lg-4">--}}
+                            {{--<h4>Pl</h4>--}}
+                            {{--<div class="date">--}}
+                                {{--Get--}}
+                                {{--<input id="getDates" type="button" class="btn btn-default" value="get">--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+
+                        <div class="text-center" id="page-selection" style="color: white"></div>
+                        <div class="text-center" style="color: white">
+                            <h4>Please choose a week</h4>
+                        </div>
                         <script>
 
                             jQuery(function(){

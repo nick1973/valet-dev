@@ -37,9 +37,15 @@
       <file leaf-file-name="weekly_report.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/reports/weekly_report.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="558">
+              <caret line="155" column="34" selection-start-line="136" selection-start-column="28" selection-end-line="155" selection-end-column="34" />
+              <folding>
+                <element signature="e#9306#9326#0#HTML" expanded="true" />
+                <element signature="e#9383#9403#0#HTML" expanded="true" />
+                <marker date="1480335154123" expanded="false" signature="7904:7916" ph="..." />
+                <marker date="1480335154123" expanded="false" signature="8353:8365" ph="..." />
+                <marker date="1480335154123" expanded="false" signature="8838:8850" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -388,14 +394,7 @@
       <workItem from="1479373505721" duration="617000" />
       <workItem from="1479979957601" duration="13976000" />
       <workItem from="1480064766774" duration="18580000" />
-      <workItem from="1480323542879" duration="10923000" />
-    </task>
-    <task id="LOCAL-00020" summary="pre-book car type and datetime">
-      <created>1478614460016</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1478614460016</updated>
+      <workItem from="1480323542879" duration="11043000" />
     </task>
     <task id="LOCAL-00021" summary="pre-book car type and datetime">
       <created>1478618290896</created>
@@ -733,11 +732,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480329475934</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="reports">
+      <created>1480335052455</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1480335052455</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103770000" />
+    <option name="totallyTimeSpent" value="103890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -802,7 +808,8 @@
     <MESSAGE value="Bug fix's for v0.3" />
     <MESSAGE value="Reports pagination fix" />
     <MESSAGE value="ticket fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="ticket fix" />
+    <MESSAGE value="reports" />
+    <option name="LAST_COMMIT_MESSAGE" value="reports" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1162,9 +1169,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/reports/weekly_report.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="558">
+          <caret line="155" column="34" selection-start-line="136" selection-start-column="28" selection-end-line="155" selection-end-column="34" />
+          <folding>
+            <element signature="e#9306#9326#0#HTML" expanded="true" />
+            <element signature="e#9383#9403#0#HTML" expanded="true" />
+            <marker date="1480335154123" expanded="false" signature="7904:7916" ph="..." />
+            <marker date="1480335154123" expanded="false" signature="8353:8365" ph="..." />
+            <marker date="1480335154123" expanded="false" signature="8838:8850" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
