@@ -103,14 +103,14 @@ class HomeController extends Controller
         if($lastRecord!=""){
             $created_at = Tracking::where($ticket_id, $lastRecord->$ticket_id)->first();
         }
-        return $created_at;
+        //return $created_at;
         if($lastRecord==""){
             $ticket_number = Auth::user()->ticket_number;
             $ticket_serial_number = Auth::user()->ticket_serial_number;
             return view('create', compact('ticket_number', 'ticket_serial_number', 'booked_in_by'));
         }
         $user_created_at = Auth::user()->updated_at;
-
+        return $user_created_at->gt($created_at->updated_at);
         //$ticket_number = (int)$lastRecord->$ticket_id;
         //$ticket_number = $lastRecord;
         //return $ticket_number;
