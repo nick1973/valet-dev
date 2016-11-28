@@ -102,7 +102,7 @@ class HomeController extends Controller
         $lastRecord = Tracking::latest()->where($ticket_id, '!=', '')->where('ticket_status', '=', 'active')
             ->orWhere('ticket_status', '=', 'complete')->first();
 
-        //return $lastRecord;
+        return $lastRecord;
 
         if($lastRecord!=""){
             $created_at = Tracking::where($ticket_id, $lastRecord->$ticket_id)->first();
