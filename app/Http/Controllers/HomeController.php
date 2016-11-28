@@ -118,7 +118,7 @@ class HomeController extends Controller
         //$ticket_number = (int)$lastRecord->$ticket_id;
         //$ticket_number = $lastRecord;
         //return $ticket_number;
-        //return $user_created_at . ' ' . $lastRecord->updated_at;
+        return $user_created_at . ' ' . $created_at;
         //USE USER TICKET No
         if($user_created_at->gt($created_at)){
             $ticket_number = Auth::user()->ticket_number;
