@@ -110,13 +110,13 @@ class HomeController extends Controller
             return view('create', compact('ticket_number', 'ticket_serial_number', 'booked_in_by'));
         }
         $user_created_at = Auth::user()->updated_at;
-        //return $user_created_at->gt($created_at->updated_at);
+        return $user_created_at >$created_at->updated_at;
         //$ticket_number = (int)$lastRecord->$ticket_id;
         //$ticket_number = $lastRecord;
         //return $ticket_number;
 
 
-        return $user_created_at . ' ' . $lastRecord->updated_at;
+        //return $user_created_at . ' ' . $lastRecord->updated_at;
         //USE USER TICKET NO
         if($user_created_at->gt($created_at->updated_at)){
             $ticket_number = Auth::user()->ticket_number;
