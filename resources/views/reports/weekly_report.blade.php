@@ -156,10 +156,10 @@
                         </div>
 
 
-                        {{--<div class="text-center" id="page-selection" style="color: white"></div>--}}
-                        {{--<div class="text-center" style="color: white">--}}
-                            {{--<h4>Please choose a week</h4>--}}
-                        {{--</div>--}}
+                        <div class="text-center" id="page-selection" style="color: white"></div>
+                        <div class="text-center" style="color: white">
+                            <h4>Please choose a week</h4>
+                        </div>
                         <script>
 
                             jQuery(function(){
