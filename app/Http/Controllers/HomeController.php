@@ -100,8 +100,8 @@ class HomeController extends Controller
         }
         
         $lastRecord = Tracking::latest('id')->where('ticket_status', 'active')->where($ticket_id, '!=', '')->first();
-        //$created_at = Tracking::where($ticket_id, $lastRecord->$ticket_id)->first();
-        return $lastRecord;
+        $created_at = Tracking::where($ticket_id, $lastRecord->$ticket_id)->first();
+        //return $lastRecord;
         if($lastRecord==null){
             $ticket_number = Auth::user()->ticket_number;
             $ticket_serial_number = Auth::user()->ticket_serial_number;
