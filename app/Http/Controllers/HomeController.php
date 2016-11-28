@@ -120,7 +120,7 @@ class HomeController extends Controller
         //return $ticket_number;
         //return $user_created_at . ' ' . $lastRecord->updated_at;
         //USE USER TICKET No
-        if($created_at->gt($user_created_at)){
+        if($user_created_at->gt($created_at)){
             $ticket_number = Auth::user()->ticket_number;
             $ticket_serial_number = Auth::user()->ticket_serial_number;
             return view('create', compact('ticket_number', 'ticket_serial_number', 'booked_in_by'));
