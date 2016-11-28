@@ -99,8 +99,8 @@ class HomeController extends Controller
             $ticket_serial_number = 'valet3_ticket_serial_number';
         }
         //return $ticket_id;
-        $lastRecord = Tracking::latest()->whereNotNull($ticket_id)->where('ticket_status', '=', 'active')
-            ->orWhere('ticket_status', '=', 'complete')->first();
+        $lastRecord = Tracking::latest()->where($ticket_id, '!=', '')->first();//->where('ticket_status', '=', 'active')
+            //->orWhere('ticket_status', '=', 'complete')->first();
 
         return $lastRecord;
         $created_at = "";
