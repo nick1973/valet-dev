@@ -47,8 +47,8 @@
       <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="109" column="27" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
+            <state relative-caret-position="330">
+              <caret line="116" column="10" selection-start-line="116" selection-start-column="10" selection-end-line="116" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -453,14 +453,7 @@
       <workItem from="1479373505721" duration="617000" />
       <workItem from="1479979957601" duration="13976000" />
       <workItem from="1480064766774" duration="18580000" />
-      <workItem from="1480323542879" duration="3837000" />
-    </task>
-    <task id="LOCAL-00003" summary="test">
-      <created>1474275469645</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1474275469645</updated>
+      <workItem from="1480323542879" duration="3921000" />
     </task>
     <task id="LOCAL-00004" summary="test">
       <created>1474277083554</created>
@@ -798,11 +791,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480327265143</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="ticket fix">
+      <created>1480327418129</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1480327418129</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96684000" />
+    <option name="totallyTimeSpent" value="96768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1226,8 +1226,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="109" column="27" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
+        <state relative-caret-position="330">
+          <caret line="116" column="10" selection-start-line="116" selection-start-column="10" selection-end-line="116" selection-end-column="10" />
           <folding />
         </state>
       </provider>
