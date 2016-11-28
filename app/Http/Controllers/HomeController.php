@@ -98,22 +98,16 @@ class HomeController extends Controller
             $ticket_id = 'valet3_ticket_id';
             $ticket_serial_number = 'valet3_ticket_serial_number';
         }
-
         $lastRecord = Tracking::latest('id')->where('ticket_status', 'active')->where($ticket_id, '!=', '')->first();
-        if($lastRecord!=""){
-            $created_at = Tracking::where($ticket_id, $lastRecord->$ticket_id)->first();
-        }
-        //return $created_at;
-        if($lastRecord==""){
-            $ticket_number = Auth::user()->ticket_number;
-            $ticket_serial_number = Auth::user()->ticket_serial_number;
-            return view('create', compact('ticket_number', 'ticket_serial_number', 'booked_in_by'));
-        }
+        $created_at = Tracking::where($ticket_id, $lastRecord->$ticket_id)->first();
+
         $user_created_at = Auth::user()->updated_at;
-        dd ($user_created_at->gt($created_at->updated_at));
+
         //$ticket_number = (int)$lastRecord->$ticket_id;
         //$ticket_number = $lastRecord;
         //return $ticket_number;
+
+
         //return $user_created_at . ' ' . $lastRecord->updated_at;
         //USE USER TICKET NO
         if($user_created_at->gt($created_at->updated_at)){
@@ -121,11 +115,9 @@ class HomeController extends Controller
             $ticket_serial_number = Auth::user()->ticket_serial_number;
             return view('create', compact('ticket_number', 'ticket_serial_number', 'booked_in_by'));
         }
-
-
-
         $ticket_serial_number = (int)$lastRecord->$ticket_serial_number;
         $ticket_serial_number = $ticket_serial_number + 1;
+
         //find last ticket number in all 3 ticket id's
         $ticket_number = (int)$lastRecord->$ticket_id;
         //return $ticket_number;
@@ -136,10 +128,12 @@ class HomeController extends Controller
 //        if($lastRecord->$ticket_id==$ticket_number){
 //            $ticket_number = sprintf('%03d', (int)$ticket_number + 1);
 //        }
+
         if($ticket_number==='121')
         {
             $ticket_number = '001';
         }
+
         return view('create', compact('ticket_number', 'ticket_serial_number', 'booked_in_by'));
     }
 
