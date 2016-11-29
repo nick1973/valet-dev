@@ -34,27 +34,43 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/reports/car-count', 'ReportsController@carCount');
     Route::get('/reports/weekly-report', 'ReportsController@weeklyReport');
     Route::get('/reports/monthly-report', 'ReportsController@monthlyReport');
+    Route::get('/reports/manager-report', 'ReportsController@managerReport');
 
     Route::post('/reports/weekly_notes', 'ReportsController@notes');
 
     Route::post('/reports/weekly-report', function (){
 
         $period = $_POST['period'];
+        if($period=='manager'){
+            $day_end = $_POST['day_end'];
+            $month_end = $_POST['month_end'];
+            $year_end = $_POST['year_end'];
+            $week_end = \Carbon\Carbon::create($year_end,$month_end,$day_end,0);
+            $weekEnd = date_format($week_end,"Y/m/d H:i:s");
+            $page_id = 1;
+            $weekE = date_format($week_end,"d/m/Y");
+        } else{
+            $page_id = $_POST['page_id'];
+        }
         $day = $_POST['day'];
         $month = $_POST['month'];
         $year = $_POST['year'];
-        $page_id = $_POST['page_id'];
-        //return $day;
+
+        //return $weekEnd;
         $week = \Carbon\Carbon::create($year,$month,$day,0);
         $weekStart = date_format($week,"Y/m/d H:i:s");
         $weekSrt = date_format($week,"d/m/Y");
         if($period=='monthly'){
             $addWeek = $week->addDays(27);
-        } else{
+            $weekEnd = date_format($addWeek,"Y/m/d H:i:s");
+            $weekE = date_format($addWeek,"d/m/Y");
+        } elseif($period=='weekly'){
             $addWeek = $week->addDays(6);
+            $weekEnd = date_format($addWeek,"Y/m/d H:i:s");
+            $weekE = date_format($addWeek,"d/m/Y");
         }
-        $weekEnd = date_format($addWeek,"Y/m/d H:i:s");
-        $weekE = date_format($addWeek,"d/m/Y");
+
+
         $card = \App\Tracking::where('ticket_payment','Card Payment')->whereBetween('created_at', [$weekStart, $weekEnd])->whereNotIn('ticket_status',['deleted'])->count();
         $cash = \App\Tracking::where('ticket_payment','Cash Payment')->whereBetween('created_at', [$weekStart, $weekEnd])->whereNotIn('ticket_status',['deleted'])->count();
         $not_paid = \App\Tracking::whereNotIn('ticket_price', ['VIP-FREE'])->where('ticket_payment','Not Paid')->whereBetween('created_at', [$weekStart, $weekEnd])->whereNotIn('ticket_status',['deleted'])->count();
@@ -67,9 +83,12 @@ Route::group(['middleware' => 'auth'], function () {
                 'vip' => $vip,
                 'car_count' => $car_count,
                 'weekSrt' => $weekSrt,
+                'weekEnd' => $weekEnd,
                 'weekE' => $weekE,
                 'notes' => $notes];
     });
+
+
 
     Route::resource('/reports', 'ReportsController');
 

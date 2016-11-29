@@ -48,6 +48,9 @@ class HomeController extends Controller
         if($user->name==='visitorcentre'){
             return redirect()->action('PreBookController@index');
         }
+        if($user->name==='manager'){
+            return redirect()->action('ReportsController@managerReport');
+        }
         if($user->ticket_number!=='' || $user->ticket_serial_number!==''){
             return view('home', compact('user', 'tickets'));
         }

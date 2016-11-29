@@ -33,6 +33,11 @@ class ReportsController extends Controller
         return $input;
     }
 
+    public function managerReport()
+    {
+        return view('reports.manager_report');
+    }
+
     public function weeklyReport()
     {
         $weekly_report = Reports::where('page_id','1')->get();
