@@ -1,20 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @nick1973
- Unwatch 1
-  Star 0
-  Fork 0 nick1973/valet-dev
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
-Tree: b7cf5a1633 Find file Copy pathvalet-dev/composer.lock
-ce1a107  on Sep 19
-@nick1973 nick1973 test
-1 contributor
-RawBlameHistory     
-3220 lines (3219 sloc)  113 KB
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
@@ -3234,5 +3217,3 @@ RawBlameHistory
     },
     "platform-dev": []
 }
-Contact GitHub API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Status Help
