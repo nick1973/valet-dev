@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
          //$this->call(TrackingTableSeeder::class);
          $this->call(VisitorCentreSeeder::class);
          $this->call(TrackingDataSeedTableSeeder::class);
+         $this->call(managerSeeder::class);
         Model::reguard();
     }
 }
