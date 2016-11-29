@@ -58,7 +58,7 @@ class HomeController extends Controller
     public function history()
     {
         $user = Auth::user();
-        $tickets = Tracking::where('ticket_status', 'complete')->orderBy('created_at', 'desc')->get();
+        $tickets = Tracking::where('ticket_status', 'complete')->orWhere('ticket_status', 'refunded')->orderBy('created_at', 'desc')->get();
         return view('history', compact('user', 'tickets'));
     }
 

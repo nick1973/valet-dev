@@ -50,14 +50,38 @@
                                     <p><?php echo empty($ticket->ticket_model) ? "." : "<span style='color: white'>" .$ticket->ticket_model. "</span>"; ?></p>
                                     <p><?php echo empty($ticket->ticket_colour) ? "." : "<span style='color: white'>" .$ticket->ticket_colour. "</span>"; ?></p>
                                     <p><?php echo empty($ticket->ticket_notes) ? "." : "<span style='color: white'>" .$ticket->ticket_notes. "</span>"; ?></p>
-                                    <p><?php echo empty($ticket->ticket_price) ? "." : "<span style='color: white'>" .$ticket->ticket_price. "</span>"; ?></p>
+                                    <p><?php echo empty($ticket->ticket_price) ? "." : "<span style='color: white'>" .$ticket->ticket_price. " " . $ticket->ticket_payment . "</span>"; ?></p>
                         </div>
-                        <div class="col-xs-12 row" style="padding-bottom: 10px">
-                            <a href="/history" class="btn btn-default pull-left">Back</a>
-                        </div>
+                            <div class="col-xs-12 row" style="padding-bottom: 10px">
+                                <a id="backBtn" href="/history" class="btn btn-default">Back</a>
+                                    @if($ticket->ticket_price != 'VIP-FREE')
+                                        @if($ticket->ticket_status != 'refunded')
+                                            <button id="refund" class="btn btn-danger pull-right">Refund {{ $ticket->ticket_payment }}</button>
+                                            @else
+                                            <p class="pull-right" style="color: red">Refunded</p>
+                                        @endif
+                                    @endif
+                            </div>
+                        {!! Form::model($ticket,[
+                            'method' => 'PATCH',
+                            'route' => ['home.update', $ticket->id],
+                            'id'=>'priceForm']) !!}
+                            {{ csrf_field() }}
+                            <div id="do_refund" class="col-xs-12 row" style="padding-bottom: 10px; display: none">
+                                {{--<input name="ticket_payment" value="{{ $ticket->ticket_payment }}" hidden>--}}
+                                <input name="ticket_status" value="refunded" hidden>
+                                <button id="confirm_refund" class="btn btn-warning pull-right">Confirm</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        $("#refund").click(function () {
+            $("#do_refund").show('fade')
+            $("#backBtn").html('Cancel')
+        })
+    </script>
 @endsection

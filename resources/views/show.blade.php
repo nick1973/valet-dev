@@ -83,19 +83,25 @@
                                 {{ csrf_field() }}
                                 <select name="ticket_price" class="form-control" id="ticket_price">
                                     <option>{{ $ticket->ticket_price }}</option>
-                                    <option value="20">£20</option>
-                                    <option value="0">VIP-FREE</option>
+                                    <option value="£20">£20</option>
+                                    <option value="VIP-FREE">VIP-FREE</option>
                                     {{--<option value="10">Self drive-£10</option>--}}
                                 </select>
                                 <div id="paymentMethod" class="col-xs-12"></div>
                             </form>
-
-
-                        <div class="col-xs-12 row" style="padding-bottom: 10px; padding-top: 10px">
-                            <div onclick="submitPrice('Card Payment')" class="col-xs-4"><button type="submit" class="btn btn-success">Paid Card</button></div>
-                            <div onclick="submitPrice('Cash Payment')" class="col-xs-4"><button type="submit" class="btn btn-primary">Paid Cash</button></div>
-                            <div onclick="submitPrice('Not Paid')" class="col-xs-4"><button type="submit" class="btn btn-danger">Not Paid</button></div>
-                        </div>
+                        {{--@if($ticket->ticket_price == 'VIP-FREE')--}}
+                            <div class="col-xs-12 row vip" style="padding-bottom: 10px; padding-top: 10px">
+                                <div onclick="submitPrice('')" class="col-xs-4"><button type="submit" class="btn btn-warning">Confirm VIP</button></div>
+                                {{--<div onclick="submitPrice('Cash Payment')" class="col-xs-4"><button type="submit" class="btn btn-primary">Paid Cash</button></div>--}}
+                                {{--<div onclick="submitPrice('Not Paid')" class="col-xs-4"><button type="submit" class="btn btn-danger">Not Paid</button></div>--}}
+                            </div>
+                        {{--@else--}}
+                            <div class="col-xs-12 row non_vip" style="padding-bottom: 10px; padding-top: 10px">
+                                <div onclick="submitPrice('Card Payment')" class="col-xs-4"><button type="submit" class="btn btn-success">Paid Card</button></div>
+                                <div onclick="submitPrice('Cash Payment')" class="col-xs-4"><button type="submit" class="btn btn-primary">Paid Cash</button></div>
+                                {{--<div onclick="submitPrice('Not Paid')" class="col-xs-4"><button type="submit" class="btn btn-danger">Not Paid</button></div>--}}
+                            </div>
+                        {{--@endif--}}
                         <div id="submit" class="form-group"></div>
                         <div class="col-xs-12 row" style="padding-bottom: 10px">
                             <input class="btn btn-default pull-left" type="button" value="Back" onclick="window.history.back()">
@@ -108,6 +114,29 @@
     </div>
 
     <script>
+        $(function() {
+            var payment = '{{ $ticket->ticket_price }}'
+            if (payment == 'VIP-FREE'){
+                $(".non_vip").hide()
+                $(".vip").show('fade')
+            } else {
+                $(".vip").hide()
+                $(".non_vip").show('fade')
+            }
+        });
+
+
+        $("#ticket_price").change(function (e) {
+            console.log($(this).val())
+            if($(this).val()=='VIP-FREE'){
+                $(".non_vip").hide()
+                $(".vip").show('fade')
+            } else {
+                $(".vip").hide()
+                $(".non_vip").show('fade')
+            }
+        })
+
         function submitted(){
             $("#priceForm").submit();
         };
