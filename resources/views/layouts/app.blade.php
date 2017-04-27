@@ -71,66 +71,66 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top navbar-inverse">
-        <div class="container">
-            <div class="navbar-header">
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+            <!-- Collapsed Hamburger -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="/home">
-                    CTM Valet App
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                    @if(Auth::check())
-                        @if(Auth::user()->name!=='visitorcentre')
-                            <li><a href="/reports/car-count">Daily Car Count</a></li>
-                        @endif
-                    @endif
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-
-                        {{--<li><a href="{{ url('/register') }}">Register</a></li>--}}
-                    @else
-                        <li><a href="{{ url('/user/log_out') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                        {{--<li class="dropdown">--}}
-                            {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">--}}
-                                {{--{{ Auth::user()->name }} <span class="caret"></span>--}}
-                            {{--</a>--}}
-
-                            {{--<ul class="dropdown-menu" role="menu">--}}
-                                {{--<li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>--}}
-                            {{--</ul>--}}
-                        </li>
-                    @endif
-                </ul>
-            </div>
+            <!-- Branding Image -->
+            <a class="navbar-brand" href="/home">
+                CTM Valet App
+            </a>
         </div>
-    </nav>
 
-    @yield('content')
+        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+            <!-- Left Side Of Navbar -->
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url('/home') }}">Home</a></li>
+                @if(Auth::check())
+                    @if(Auth::user()->name!=='visitorcentre')
+                        <li><a href="/reports/car-count">Daily Car Count</a></li>
+                    @endif
+                @endif
+            </ul>
 
-    <footer class="footer">
-        <div class="container">
-            <p class="text-muted">CTM Valet App &copy; 2016 <small>v0.3</small></p>
+            <!-- Right Side Of Navbar -->
+            <ul class="nav navbar-nav navbar-right">
+                <!-- Authentication Links -->
+                @if (Auth::guest())
+                    <li><a href="{{ url('/login') }}">Login</a></li>
+
+                    {{--<li><a href="{{ url('/register') }}">Register</a></li>--}}
+                @else
+                    <li><a href="{{ url('/user/log_out') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                    {{--<li class="dropdown">--}}
+                    {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">--}}
+                    {{--{{ Auth::user()->name }} <span class="caret"></span>--}}
+                    {{--</a>--}}
+
+                    {{--<ul class="dropdown-menu" role="menu">--}}
+                    {{--<li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>--}}
+                    {{--</ul>--}}
+                    </li>
+                @endif
+            </ul>
         </div>
-    </footer>
+    </div>
+</nav>
+
+@yield('content')
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">CTM Valet App &copy; 2016 <small>v0.3</small></p>
+    </div>
+</footer>
 </body>
 <link rel="stylesheet" type="text/css" href="/css/jquery.datetimepicker.css">
 <script src="/js/jquery.js"></script>
