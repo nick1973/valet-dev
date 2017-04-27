@@ -133,7 +133,7 @@
 </footer>
 </body>
 <link rel="stylesheet" type="text/css" href="/css/jquery.datetimepicker.css">
-<script src="/js/jquery.js"></script>
+{{--<script src="/js/jquery.js"></script>--}}
 <script src="/build/jquery.datetimepicker.full.js"></script>
 
 </html>
