@@ -59,7 +59,15 @@ class UserController extends Controller
                                     ->orWhere('valet2_ticket_id', '=', $ticket_number)
                                     ->orWhere('valet3_ticket_id', '=', $ticket_number);
                             })->count();
-        if($active>0)
+        $active2 = Tracking::whereIn('ticket_status', ['active','collection'])
+            ->where(function ($query){
+                $serial_number = Input::get('ticket_serial_number');
+                  $query  ->orWhere('valet1_ticket_serial_number', '=', $serial_number)
+                            ->orWhere('valet2_ticket_serial_number', '=', $serial_number)
+                            ->orWhere('valet3_ticket_serial_number', '=', $serial_number);
+            })->count();
+
+        if($active>0 || $active2>0)
         {
             return redirect()->back()->with('status','This Ticket is in use!');
         }
