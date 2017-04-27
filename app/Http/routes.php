@@ -65,7 +65,7 @@ Route::group(['middleware' => 'auth'], function () {
             $weekEnd = date_format($addWeek,"Y/m/d H:i:s");
             $weekE = date_format($addWeek,"d/m/Y");
         } elseif($period=='weekly'){
-            $addWeek = $week->addDays(6);
+            $addWeek = $week->addDays(7);
             $weekEnd = date_format($addWeek,"Y/m/d H:i:s");
             $weekE = date_format($addWeek,"d/m/Y");
         }

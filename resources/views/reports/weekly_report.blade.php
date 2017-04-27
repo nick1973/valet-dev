@@ -70,22 +70,30 @@
                                     <td id="totalCardIncome">0</td>
                                 </tr>
 
-                                <tr>
-                                    <td>£20</td>
-                                    <td>Not Paid</td>
-                                    <td id="notPaid">0</td>
+                                {{--<tr>--}}
+                                    {{--<td>£20</td>--}}
+                                    {{--<td>Not Paid</td>--}}
+                                    {{--<td id="notPaid">0</td>--}}
                                     {{--@if(Auth::user()->name=='ctmfinance')--}}
-                                        <th class="col-lg-1"><input name="actual_not_paid" onkeyup="actual()" id="actualNotPaid" class="form-control text-center" placeholder="TBA"></th>
+                                        {{--<th class="col-lg-1"><input name="actual_not_paid" onkeyup="actual()" id="actualNotPaid" class="form-control text-center" placeholder="TBA"></th>--}}
                                     {{--@endif--}}
-                                </tr>
+                                    {{--<td>-</td>--}}
+                                    {{--<td>-</td>--}}
+                                    {{--<td>-</td>--}}
+                                    {{--<td>-</td>--}}
+                                {{--</tr>--}}
 
                                 <tr>
-                                    <td></td>
+                                    <td>-</td>
                                     <td><div class="pull-right"><b>Subtotal</b></div></td>
                                     <td class="subtotalCarCount">0</td>
                                     {{--@if(Auth::user()->name=='ctmfinance')--}}
                                         <th id="actualSubtotalCarCount">0</th>
                                     {{--@endif--}}
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
                                 </tr>
 
                                 <tr>
@@ -95,16 +103,20 @@
                                     {{--@if(Auth::user()->name=='ctmfinance')--}}
                                         <th class="col-lg-1"><input name="actual_vip" onkeyup="actual()" id="actualVIP" class="form-control text-center" placeholder="TBC"></th>
                                     {{--@endif--}}
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
                                 </tr>
                                 <tfoot style="font-weight: bold">
-                                    <td></td>
+                                    <td>-</td>
                                     <td><div class="pull-right"><b>TOTAL</b></div></td>
                                     <td id="carCount">0</td>
 {{--                                    @if(Auth::user()->name=='ctmfinance')--}}
                                         <th id="actualTotal">0</th>
                                     {{--@endif--}}
                                     <td id="totalRevenue">0</td>
-                                    <td></td>
+                                    <td>-</td>
                                     <td class="trxFee">0</td>
                                     <td id="grandTotal">0</td>
                                 </tfoot>
@@ -341,7 +353,7 @@
 
                                             var totalRev = (result.card * 20) + (result.cash * 20);
                                             $('#totalRevenue').html(totalRev.toFixed(2));
-                                            $('.subtotalCarCount').html(result.card  + result.cash +  result.not_paid);
+                                            $('.subtotalCarCount').html(result.card  + result.cash);
                                             var tax = result.card * 20 * 2.75 / 100;
                                             $('.trxFee').html(tax.toFixed(2));
                                             $('#originaltrxFee').val(tax.toFixed(2));
