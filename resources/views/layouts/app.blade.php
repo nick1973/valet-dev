@@ -128,7 +128,7 @@
 
 <footer class="footer">
     <div class="container">
-        <p class="text-muted">CTM Valet App &copy; 2016 <small>v0.3</small></p>
+        <p class="text-muted">CTM Valet App &copy; 2016 <small>v0.3.1</small></p>
     </div>
 </footer>
 </body>
