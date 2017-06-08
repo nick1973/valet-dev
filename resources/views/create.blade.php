@@ -43,15 +43,18 @@
                                 <select name="ticket_price" class="form-control" id="ticket_price">
                                     @if(!empty(old('ticket_price')))
                                         <option selected>{{ old('ticket_price') }}</option>
+                                        <option>£25</option>
                                         <option>£20</option>
                                         <option>VIP-FREE</option>
                                         <option>Self drive-£10</option>
                                     @elseif(!empty($old_data->ticket_price))
                                         <option>{{ $old_data->ticket_price }}</option>
+                                        <option>£25</option>
                                         <option>£20</option>
                                         <option>VIP-FREE</option>
                                         <option>Self drive-£10</option>
                                     @else
+                                        <option>£25</option>
                                         <option>£20</option>
                                         <option>VIP-FREE</option>
                                         {{--<option>Self drive-£10</option>--}}

@@ -60,6 +60,7 @@
                                 <label style="color: white">Price</label>
                                 <select name="ticket_price" class="form-control" id="ticket_price">
                                         <option>{{ $ticket->ticket_price }}</option>
+                                        <option>£25</option>
                                         <option>£20</option>
                                         <option>VIP-FREE</option>
                                         {{--<option>Self drive-£10</option>--}}

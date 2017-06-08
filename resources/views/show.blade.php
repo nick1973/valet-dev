@@ -83,6 +83,7 @@
                                 {{ csrf_field() }}
                                 <select name="ticket_price" class="form-control" id="ticket_price">
                                     <option>{{ $ticket->ticket_price }}</option>
+                                    <option>£25</option>
                                     <option value="£20">£20</option>
                                     <option value="VIP-FREE">VIP-FREE</option>
                                     {{--<option value="10">Self drive-£10</option>--}}
